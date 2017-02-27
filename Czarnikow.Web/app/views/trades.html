@@ -1,0 +1,27 @@
+﻿
+<div class="padding-top-10">
+    <table class="table table-striped table-bordered table-margin-bottom">
+        <thead>
+            <tr>
+                <th class="th-border" style="width: 10px">TradeId</th>
+                <th class="th-border" style="width: 30px">Product</th>
+                <th class="th-border" style="width: 30px">Client</th>
+                <th class="th-border" style="width: 10px">Date</th>
+                <th class="th-border" style="width: 10px">Qty</th>
+                <th class="th-border" style="width: 10px">Amount</th>
+                <th class="hidden-xs" style="width: 3px">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="trade in trades">
+                <td>{{trade.TradeId}}</td>
+                <td>{{trade.Product}}</td>
+                <td>{{trade.ClientName}}</td>
+                <td>{{trade.Date}}</td>
+                <td>{{trade.Quantity}}</td>
+                <td>{{trade.Amount}}</td>
+                <td><button type="button" class="btn btn-primary" data-ng-click="OnEditTrade(trade.TradeId)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

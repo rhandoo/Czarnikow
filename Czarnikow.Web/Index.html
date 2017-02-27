@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="CzarnikowApp">
+<head>
+    <title></title>
+    <title>Czarnikow Trading</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="btn btn-success navbar-toggle" data-ng-click="navbarExpanded = !navbarExpanded">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <h3 style="color: white"><strong>Czarnikow Trading</strong></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="padding-top: 95px">
+            <div data-ng-view="">
+            </div>
+        </div>
+    </div>
+    <!-- 3rd party libraries -->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+
+    <!-- Load services -->
+    <script src="app/services/tradeService.js"></script>
+    
+    <!-- Load controllers -->
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/editTradeController.js"></script>
+    <script src="app/controllers/tradeController.js"></script>
+    
+</body>
+</html>
